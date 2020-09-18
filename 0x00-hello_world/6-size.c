@@ -6,7 +6,6 @@
 */
 
 int main(void)
-
 {
 int inttype;
 float floattype;
@@ -25,5 +24,4 @@ printf("The size of a long long int: %ld byte(s)\n", sizeof(longinttype));
 printf("The size of a float: %ld byte(s)\n", sizeof(floattype));
 
 return (0);
-
 }
