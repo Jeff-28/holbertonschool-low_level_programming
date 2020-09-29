@@ -1,0 +1,1 @@
+** This directory is about the project: C programming. Tasks will be focused to the pointers, arrays, and strings concept.**
