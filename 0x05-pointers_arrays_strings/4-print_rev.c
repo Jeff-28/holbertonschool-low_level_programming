@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
-* _puts - prints a string to stdout.
-* @str: a string variable.
+* print_rev - prints a string in reverse to stdout.
+* @s: a string variable.
 * Return: void.
 */
 
