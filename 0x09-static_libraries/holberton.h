@@ -6,7 +6,7 @@ void _isupper(void);
 void _isdigit(void);
 int _strlen(char *s);
 void _puts(char *s);
-char *_strcpy(char *dest, char *src);
+void _strcpy(void);
 void _atoi(void);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
