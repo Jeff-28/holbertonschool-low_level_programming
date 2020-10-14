@@ -22,7 +22,7 @@ while (*(str + i) != '\0')
 i++;
 }
 
-newstr = (char *)malloc(sizeof(char) * i + 1);
+newstr = malloc(sizeof(char) * i + 1);
 
 if (newstr == '\0')
 {
@@ -41,4 +41,5 @@ str++;
 *dup = '\0';
 
 return (newstr);
+
 }
