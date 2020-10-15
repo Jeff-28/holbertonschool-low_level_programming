@@ -17,6 +17,11 @@ int i = 0;
 char *newstr;
 char *dup;
 
+if (str == NULL)
+{
+return (NULL);
+}
+
 while (*(str + i) != '\0')
 {
 i++;
@@ -24,9 +29,10 @@ i++;
 
 newstr = malloc(sizeof(char) * i + 1);
 
-if (newstr == '\0')
+if (newstr == NULL)
 {
-return ('\0');
+free(newstr);
+return (NULL);
 }
 
 dup = newstr;
