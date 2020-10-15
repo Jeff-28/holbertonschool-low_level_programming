@@ -15,23 +15,23 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 char *mem;
 
 if (nmemb == 0 || size == 0)
-  {
+{
 return (NULL);
-  }
+}
 
 mem = malloc(sizeof(unsigned int) * nmemb * size);
 
 if (mem == NULL)
-  {
-    free(mem);
+{
+free(mem);
 return (NULL);
-  }
+}
 
- while (*mem)
-   {
+while (*mem)
+{
 *mem = 0;
- mem++;
-   }
+mem++;
+}
 
 return (mem);
 }
