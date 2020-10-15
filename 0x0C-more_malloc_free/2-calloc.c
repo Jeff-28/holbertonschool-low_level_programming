@@ -27,7 +27,11 @@ if (mem == NULL)
 return (NULL);
   }
 
+ while (*mem)
+   {
 *mem = 0;
+ mem++;
+   }
 
 return (mem);
 }
