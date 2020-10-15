@@ -17,12 +17,19 @@ char *buffer;
 
 if (size == 0)
 {
-return ('\0');
+return (NULL);
 }
 
-buffer = malloc(sizeof(unsigned int) * size);
+buffer = malloc(sizeof(char) * size);
+
+if (buffer == NULL)
+{
+free(buffer);
+return (NULL);
+}
 
 *buffer = c;
+
 
 return (buffer);
 
