@@ -32,7 +32,7 @@ if (n >= j)
 {
 n = j;
 }
-str = malloc(i + n);
+str = malloc(i + n + 1);
 if (str == NULL)
 {
 return (NULL);
