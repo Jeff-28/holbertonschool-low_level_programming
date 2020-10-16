@@ -47,5 +47,6 @@ while (idx2 < n)
 str[idx + idx2] = s2[idx2];
 idx2++;
 }
+str[idx + idx2] = '\0';
 return (str);
 }
