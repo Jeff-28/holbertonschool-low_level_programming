@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "holberton.h"
-
 /**
  * string_nconcat - concatenates two strings.
  * @s1: destination string.
@@ -9,41 +8,44 @@
  *     from @s2.
  * Return: pointer to the new string.
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-
-int i = 0;
-unsigned int j = 0;
-char *str, *new;
-
+unsigned int i = 0, j = 0, idx = 0, idx2 = 0;
+char *str;
+if (s1 == NULL)
+{
+s1 = "";
+}
+if (s2 == NULL)
+{
+s2 = "";
+}
 while (s1[i] != '\0')
 {
 i++;
 }
-
-str = malloc(sizeof(char) * i + n);
-
+while (s2[j] != '\0')
+{
+j++;
+}
+if (n >= j)
+{
+n = j;
+}
+str = malloc(i + n);
 if (str == NULL)
 {
 return (NULL);
 }
-
-new = str;
-
-while (*s1)
+while (idx < i)
 {
-*new = *s1;
-new++;
-s1++;
+str[idx] = s1[idx];
+idx++;
 }
-
-while (j < n)
+while (idx2 < n)
 {
-*new = *(s2 + j);
-new++;
-j++;
+str[idx + idx2] = s2[idx2];
+idx2++;
 }
-
 return (str);
 }
