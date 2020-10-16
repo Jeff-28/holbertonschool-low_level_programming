@@ -13,7 +13,7 @@ char *create_array(unsigned int size, char c)
 {
 
 char *buffer;
-
+unsigned int i = 0;
 
 if (size == 0)
 {
@@ -28,8 +28,11 @@ free(buffer);
 return (NULL);
 }
 
-*buffer = c;
-
+while (i < size)
+{
+buffer[i] = c;
+i++;
+}
 
 return (buffer);
 
