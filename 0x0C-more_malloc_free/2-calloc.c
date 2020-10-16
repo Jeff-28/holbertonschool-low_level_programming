@@ -13,6 +13,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 
 char *mem;
+unsigned int i = 0;
 
 if (nmemb == 0 || size == 0)
 {
@@ -27,10 +28,10 @@ free(mem);
 return (NULL);
 }
 
-while (*mem)
+while (i < nmemb * size)
 {
-*mem = 0;
-mem++;
+mem[i] = 0;
+i++;
 }
 
 return (mem);
