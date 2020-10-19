@@ -1,0 +1,1 @@
+** In this project we'll be working with constants, macros and directives.**
