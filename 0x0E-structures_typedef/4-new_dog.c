@@ -39,5 +39,7 @@ if (new->owner == NULL)
 return (NULL);
 }
 
+new->owner = owner;
+
 return (new);
 }
