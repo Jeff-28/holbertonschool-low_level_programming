@@ -18,6 +18,7 @@ new = malloc(sizeof(dog_t));
 
 if (new == NULL)
 {
+free(new);
 return (NULL);
 }
 
@@ -25,6 +26,7 @@ new->name = malloc(sizeof(name));
 
 if (new->name == NULL)
 {
+free(new->name);
 return (NULL);
 }
 
@@ -36,6 +38,7 @@ new->owner = malloc(sizeof(owner));
 
 if (new->owner == NULL)
 {
+free(new->owner);
 return (NULL);
 }
 
