@@ -13,7 +13,7 @@ void print_dog(struct dog *d)
 
 if (d == NULL)
 {
-printf(" \n");
+exit(1);
 }
 
 if (d->name == NULL)
