@@ -30,12 +30,11 @@ printf("Name: %s\n", d->name);
 
 if (d->age == '\0')
 {
-printf("Age: (nil)\n");
+d->age = 0;
 }
-else
-{
+
 printf("Age: %f\n", d->age);
-}
+
 
 printf("Owner: %s\n", d->owner);
 
