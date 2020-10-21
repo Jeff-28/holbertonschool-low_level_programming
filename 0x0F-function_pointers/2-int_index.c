@@ -34,8 +34,7 @@ return (index);
 
 if (index == size && result == 0)
 {
-index = -1;
-return (index);
+return (-1);
 }
 
 }
