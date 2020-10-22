@@ -16,7 +16,7 @@ int index = 0, i, result;
 
 if (array == NULL || cmp == NULL)
 {
-return (0);
+return ('\0');
 }
 
 if (size <= 0)
