@@ -18,6 +18,7 @@ void print_int(va_list arguments)
 {
 	printf("%i", va_arg(arguments, int));
 }
+
 /**
  * print_str - prints a string.
  * @arguments: list of arguments.
@@ -48,7 +49,7 @@ void print_all(const char * const format, ...)
 		{'c', print_char},
 		{'i', print_int},
 		{'s', print_str},
-		{'\0', NULL}};
+		{0, NULL}};
 
 	va_start(arguments, format);
 
