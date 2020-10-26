@@ -47,7 +47,8 @@ void print_all(const char * const format, ...)
 	printer_t printer_func[] = {
 		{'c', print_char},
 		{'i', print_int},
-		{'s', print_str}};
+		{'s', print_str}
+		{0, NULL}};
 
 	va_start(arguments, format);
 
