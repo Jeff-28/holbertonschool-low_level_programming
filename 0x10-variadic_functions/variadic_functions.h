@@ -5,6 +5,18 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * struct printer -struct printer
+ * @chars: character to compare.
+ * @printer_pointer: pointer to print function.
+ */
+
+typedef struct printer
+{
+	char chars;
+	void (*printer_pointer)(va_list);
+} printer_t;
+
 int sum_them_all(const unsigned int n, ...);
 
 void print_numbers(const char *separator, const unsigned int n, ...);
