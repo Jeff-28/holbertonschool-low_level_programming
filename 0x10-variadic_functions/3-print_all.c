@@ -16,7 +16,7 @@ void print_char(va_list arguments)
  */
 void print_int(va_list arguments)
 {
-	printf("%d", va_arg(arguments, int));
+	printf("%i", va_arg(arguments, int));
 }
 /**
  * print_str - prints a string.
@@ -47,8 +47,8 @@ void print_all(const char * const format, ...)
 	printer_t printer_func[] = {
 		{'c', print_char},
 		{'i', print_int},
-		{'s', print_str}
-		{0, NULL}};
+		{'s', print_str},
+		{'\0', NULL}};
 
 	va_start(arguments, format);
 
