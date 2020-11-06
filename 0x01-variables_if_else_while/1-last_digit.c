@@ -13,7 +13,7 @@ int main(void)
 	int l;
 
 	srand(time(0));
-	n = 89;  /*rand() - RAND_MAX / 2;*/
+	n = rand() - RAND_MAX / 2;
 
 
 	l = n % 10;
