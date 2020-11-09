@@ -9,7 +9,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, k;
+	int fd, k, len = 0;
 
 	if (filename == NULL)
 	{
@@ -22,7 +22,12 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	k = write(fd, text_content, sizeof(text_content));
+	while (text_content[len] != '\0')
+	{
+		len++;
+	}
+
+	k = write(fd, text_content, len);
 	if (k == -1)
 	{
 		return (-1);
