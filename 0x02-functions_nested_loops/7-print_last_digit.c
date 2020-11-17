@@ -15,6 +15,10 @@ int print_last_digit(int n)
 		p = n * -1;
 		k = p % 10;
 	}
+	else if (n == 1)
+	{
+		k = n;
+	}
 	else
 	{
 		k = n % 10;
