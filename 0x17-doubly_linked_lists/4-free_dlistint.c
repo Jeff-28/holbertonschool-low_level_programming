@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_list - frees a list from dinamically allocated memory.
+ * free_dlistint - frees a list from dinamically allocated memory.
  * @head: the start of the list.
  * Return: nothing.
  */
