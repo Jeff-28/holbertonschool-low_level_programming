@@ -10,7 +10,7 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 0; 1 <= 98; i++)
+	for (i = 0; i <= 98; i++)
 	{
 		for (j = i + 1; j <= 99; j++)
 		{
@@ -23,10 +23,8 @@ int main(void)
 			if (i == 98 && j == 99)
 				continue;
 
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
