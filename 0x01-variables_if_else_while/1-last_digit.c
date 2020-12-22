@@ -11,7 +11,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	n = 98;
 	l = n % 10;
 
 	if (l == 0)
