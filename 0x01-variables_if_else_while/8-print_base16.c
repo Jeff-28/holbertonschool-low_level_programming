@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - iprints all the numbers of base 16 in lowercase, followed by a new line.
+ * main - iprints all the numbers of base 16 in lowercase
  * Return: value 0
  */
 int main(void)
