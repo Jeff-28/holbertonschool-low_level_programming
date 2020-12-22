@@ -1,6 +1,7 @@
 #include "lists.h"
+void startupfun (void) __attribute__ ((constructor));
 /**
-* prelude - function to be executed before the main
+* startupfun - function to be executed before the main
 *
 * Return: nothing
 */
