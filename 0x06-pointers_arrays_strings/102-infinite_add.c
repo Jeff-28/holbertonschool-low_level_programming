@@ -1,35 +1,56 @@
 #include "holberton.h"
 /**
- * infinite_add - Adds two numbers
- * @n1: first input string
- * @n2: second input string
- * @r: pointer to buffer where result is stored
- * @size_r: requested size for the buffer
- * Return: pointer to buffer where result is stored
+ * infinite_add - add 2 strings.
+ * @n1: string1.
+ * @n2: string2.
+ * @r: buffer
+ * @size_r: buffer size
+ * Return: String with all letters in ROT13 base.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, n;
+	int a_len = 0, b_len = 0, carry = 0, a, b, sum, biggest;
 
-	i = j = n = 0;
-	if ((n1[0] - '0') + (n2[0] - '0') >= 10)
+	while (n1[a_len] != '\0')
+		a_len++;
+	while (n2[b_len] != '\0')
+		b_len++;
+	if (a_len > b_len)
+		biggest = a_len;
+	else
+		biggest = b_len;
+	if ((biggest + 1) >= size_r)
+		return (0);
+	r[biggest + 1] = '\0';
+	while (biggest >= 0)
 	{
-		r[0] = 1 + '0';
-		j = 1;
-	}
-	while (i < size_r && (n1[i] != '\0' || n2[i] != '\0' || r[j] != '\0'))
-	{
-		if ((n1[i + 1] - '0') + (n2[i + 1] - '0') >= 10)
-			n = 1;
+		a = (n1[a_len - 1] - '0');
+		b = (n1[b_len - 1] - '0');
+		if (a_len > 0 && b_len > 0)
+			sum = a + b + carry;
+		else if (a_len < 0 && b_len > 0)
+			sum = b + carry;
+		else if (a_len > 0 && b_len < 0)
+			sum = a + carry;
 		else
-			n = 0;
-		r[j] = (n1[i] - '0') + (n2[i] - '0') + n;
-		r[j] = r[j] % 10 + '0';
-		i++;
-		j++;
-		if (n1[i] == '\0' || n2[i] == '\0')
-			r[j] = '\0';
+			sum = carry;
+		if (sum > 9)
+		{
+			carry = sum / 10;
+			sum = (sum % 10) + '0';
+		}
+		else
+		{
+			carry = 0;
+			sum = sum + '0';
+		}
+		r[biggest] = sum;
+		a_len--;
+		b_len--;
+		biggest--;
 	}
-	r[j] = '\0';
-	return (r);
+	if (*(r) != 0)
+		return (r);
+	else
+		return (r + 1);
 }
