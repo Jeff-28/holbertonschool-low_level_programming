@@ -13,7 +13,7 @@
 
 typedef struct printer
 {
-	char chars;
+	char *chars;
 	void (*printer_pointer)(va_list);
 } printer_t;
 
