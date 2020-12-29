@@ -45,11 +45,12 @@ void print_all(const char * const format, ...)
 	char *separator = "";
 	va_list arguments;
 	printer_t printer_func[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'s', print_str},
+		{"c", print_char},
+		{"i", print_int},
+		{"s", print_str},
 		{"f", print_f},
-		{NULL, NULL}};
+		{NULL, NULL}
+	};
 
 	va_start(arguments, format);
 	while (format && format[i])
@@ -57,7 +58,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (printer_func[j].chars)
 		{
-			if (format[i] == printer_func[j].chars)
+			if (format[i] == *(printer_func[j].chars))
 			{
 				printf("%s", separator);
 				printer_func[j].printer_pointer(arguments);
