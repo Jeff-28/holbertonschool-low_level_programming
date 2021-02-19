@@ -1,10 +1,10 @@
 SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
 NAME = holberton
-CFLAGS = -Wall -Werror -Wextra -pedantic
-CC = gcc $(CFLAGS)
+CFLAGS := -Wall -Werror -Wextra -pedantic
+CC := gcc $(CFLAGS)
 
-.PHONY: all clean fclean oclean re
+.PHONY = all clean fclean oclean re
 all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
