@@ -32,7 +32,7 @@ void print_arr(int *arr, size_t size)
  * @value:  is the value to search for
  *
  * Return: the first index where value is located. If value is not present
- *			in array or if array is NULL, your function must return -1
+ *			in array or if array is NULL, the function must return -1
  */
 int binary_search(int *array, size_t size, int value)
 {
