@@ -11,6 +11,9 @@ void print_arr(int *arr, size_t size)
 {
 	size_t i = 0;
 
+	if (size <= 0)
+		return;
+
 	printf("Searching in array: ");
 	while (i < size)
 	{
@@ -39,7 +42,7 @@ int binary_search(int *array, size_t size, int value)
 		return (-1);
 
 	print_arr(array, size);
-	while (l < r)
+	while (l <= r)
 	{
 		m = (l + r) / 2;
 		if (array[m] < value)
