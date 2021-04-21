@@ -29,6 +29,7 @@ void print_arr(int *arr, size_t size)
  * @arr: array where the value will be searched
  * @l: leftmost index in the array
  * @r: rightmost index in the array
+ * @value: the value to look for in the array
  *
  * Return: the index where value is, or -1 if value is not present in array
  */
