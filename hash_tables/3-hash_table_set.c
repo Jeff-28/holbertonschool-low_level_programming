@@ -21,5 +21,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	ht->array[idx]->key = strdup(key);
 	ht->array[idx]->value = strdup(value);
 
-	return idx;
+	return 1;
 }
