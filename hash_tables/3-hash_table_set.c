@@ -9,17 +9,27 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (strlen(key) == 0)
 		return 0;
 
-	idx = key_index((const unsigned char *)key, 1024);
+	idx = key_index((const unsigned char *)key, ht->size);
+
 	new = malloc(sizeof(hash_node_t));
 	if(new == NULL)
 		return 0;
 
-	new->next = ht->array[idx];
-	ht->array[idx] = new;
+	
 
-
-	ht->array[idx]->key = strdup(key);
-	ht->array[idx]->value = strdup(value);
-
+	if (!ht->array[idx])
+	{
+		ht->array[idx] = new;
+		ht->array[idx]->key = strdup(key);
+		ht->array[idx]->value = strdup(value);
+		ht->array[idx]->next = NULL;
+	}
+	else
+	{
+		new->next = ht->array[idx];
+		ht->array[idx] = new;
+		ht->array[idx]->key = strdup(key);
+		ht->array[idx]->value = strdup(value);
+	}
 	return 1;
 }
