@@ -7,7 +7,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (!ht || !key)
 		return NULL;
-	idx = key_index((const unsigned char *)key, 1024);
+	idx = key_index((const unsigned char *)key, ht->size);
 
 	if (ht->array[idx] && (strcmp(ht->array[idx]->key, key) == 0))
 	{
